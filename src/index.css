@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+
+@font-face {
+    font-family: heading;
+    src: url(/fonts/Rajdhani-Variable.woff2) format("truetype");
+}
+
+
+@font-face {
+    font-family: paragraph;
+    src: url(/chakra-petch/ChakraPetch-Medium.woff2) format("truetype");
+}
+
+.heading {
+    font-family: heading;
+}
+
+p {
+    font-family: paragraph !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: heading;
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
+
+
+.neon-border {
+    border: 2px solid rgba(110, 110, 255, 0.45);
+    box-shadow: 0 0 25px rgba(130, 130, 255, 0.35),
+        inset 0 0 35px rgba(140, 140, 255, 0.25);
+}
+
+.neon-glow {
+    box-shadow: 0 0 85px rgba(130, 130, 255, 0.35);
+}
+
+
+
+.magic-bento {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.magic-bento * {
+  transform-style: preserve-3d;
+}
