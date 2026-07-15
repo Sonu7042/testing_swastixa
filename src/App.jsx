@@ -110,19 +110,7 @@ export default function App() {
   }, []);
 
   if (loader) {
-    return (
-      <div className="fixed inset-0 w-full h-full overflow-hidden bg-black flex items-center justify-center">
-        <video
-          src="https://pub-9cfa6415ad044bcc8f009cfb63bc9ff9.r2.dev/Swastixa%20-%20WORK/All%20-%20Video's%20-%20of%20%20--%20Website/BPTP%20FINAL.mp4"
-          className="absolute inset-0 w-full h-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-        ></video>
-      </div>
-    );
+    return <PageLoader />;
   }
 
 

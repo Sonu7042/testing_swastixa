@@ -42,7 +42,7 @@ const Hero = () => {
     const context = gsap.context(() => {
       const mm = gsap.matchMedia();
 
-      mm.add("(min-width: 431px)", () => {
+      mm.add("(min-width: 431px) and (prefers-reduced-motion: no-preference)", () => {
         gsap.set(videoEl, {
           scale: 1,
           yPercent: 0,
@@ -76,6 +76,10 @@ const Hero = () => {
           borderRadius: 0,
           clearProps: "transform",
         });
+      });
+
+      mm.add("(prefers-reduced-motion: reduce)", () => {
+        gsap.set(videoEl, { scale: 1, yPercent: 0, clearProps: "transform" });
       });
 
       return () => mm.revert();

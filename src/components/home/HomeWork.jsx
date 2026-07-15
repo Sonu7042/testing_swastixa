@@ -1,39 +1,17 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Particles from "./Particles";
+import OptimizedVideo from "../common/OptimizedVideo";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const LazyAutoplayVideo = ({ src }) => {
-  const videoRef = useRef(null);
-  const containerRef = useRef(null);
-  const [shouldLoad, setShouldLoad] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setShouldLoad(true);
-        videoRef.current?.play().catch(() => {});
-      } else {
-        videoRef.current?.pause();
-      }
-    }, { rootMargin: "400px", threshold: 0.01 });
-
-    if (containerRef.current) observer.observe(containerRef.current);
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <div ref={containerRef} className="w-full h-full">
-      <video
-        ref={videoRef}
-        src={shouldLoad ? src : undefined}
-        autoPlay
-        muted
+    <div className="w-full h-full">
+      <OptimizedVideo
+        src={src}
         loop
-        playsInline
-        preload="metadata"
         className="w-full h-full object-cover block rounded-sm"
       />
     </div>
@@ -59,7 +37,8 @@ const ForthSection = () => {
     tl4.fromTo(".rotate", { xPercent: 0 }, { xPercent: -74.6, ease: "none" });
 
     return () => {
-      ScrollTrigger.getAll().forEach((st) => st.kill());
+      tl4.scrollTrigger?.kill();
+      tl4.kill();
     };
   }, []);
 

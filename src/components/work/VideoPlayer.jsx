@@ -356,8 +356,8 @@ const VideoPlayer = ({ src, poster }) => {
           controls
           playsInline
           preload="metadata"
-          onLoadedData={() => setIsReady(true)}
           onCanPlay={() => setIsReady(true)}
+          onError={() => setIsReady(false)}
           className={`w-full h-full object-cover transition-all duration-1000 ${
             isReady
               ? "opacity-100 scale-100"

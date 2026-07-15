@@ -128,8 +128,8 @@ const ReelItem = memo(({ item, index, isActive, onActive }) => {
                     muted
                     playsInline
                     preload="metadata"
-                    onLoadedData={() => setIsLoaded(true)}
                     onCanPlay={() => setIsLoaded(true)}
+                    onError={() => setIsLoaded(false)}
                     className={`w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-102 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
                 >
                     <source src={item.video} type="video/mp4" />

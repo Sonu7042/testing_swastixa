@@ -22,22 +22,46 @@ html.lenis {
 
 
 @font-face {
-    font-family: heading;
-    src: url(/fonts/Rajdhani-Variable.woff2) format("truetype");
+    font-family: "Rajdhani";
+    src: url("/fonts/Rajdhani-Variable.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 300 700;
+    font-display: swap;
 }
 
 
 @font-face {
-    font-family: paragraph;
-    src: url(/chakra-petch/ChakraPetch-Medium.woff2) format("truetype");
+    font-family: "Chakra Petch";
+    src: url("/chakra-petch/ChakraPetch-Medium.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
 }
 
 .heading {
-    font-family: heading;
+    font-family: "Rajdhani", system-ui, sans-serif;
 }
 
 p {
-    font-family: paragraph !important;
+    font-family: "Chakra Petch", system-ui, sans-serif !important;
 }
 
 h1,
@@ -46,7 +70,14 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: heading;
+    font-family: "Rajdhani", system-ui, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  video {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
 

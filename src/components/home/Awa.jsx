@@ -1,29 +1,16 @@
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Award from "../../assets/logo/awards.png";
 import { Link } from "react-router-dom";
+import OptimizedVideo from "../common/OptimizedVideo";
+
+const AWARDS_VIDEO_URL = "https://res.cloudinary.com/dzsotenu5/video/upload/v1764048647/WhatsApp_Video_2025-11-21_at_2.50.32_PM_1_kmkacz.mp4";
 
 
 const AwardsHero = () => {
   const canvasRef = useRef(null);
   const wrapperRef = useRef(null);
   const sectionRef = useRef(null);
-  const videoRef = useRef(null);
-  const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setShouldLoadVideo(true);
-        videoRef.current?.play().catch(() => {});
-      } else {
-        videoRef.current?.pause();
-      }
-    }, { rootMargin: "400px", threshold: 0.01 });
-
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
-  }, []);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -138,17 +125,11 @@ const AwardsHero = () => {
     <section ref={sectionRef} className="h-screen w-full bg-black flex items-center justify-evenly overflow-hidden relative">
 
       {/* === Background Video === */}
-      <video
-        ref={videoRef}
-        src={shouldLoadVideo ? "https://res.cloudinary.com/dzsotenu5/video/upload/v1764048647/WhatsApp_Video_2025-11-21_at_2.50.32_PM_1_kmkacz.mp4" : undefined}
-        autoPlay
+      <OptimizedVideo
+        src={AWARDS_VIDEO_URL}
         loop
-        muted
-        playsInline
-        preload="metadata"
         className="absolute inset-0 w-full h-full object-cover z-0"
-      >
-      </video>
+      />
 
       {/* Canvas Overlay */}
       <canvas

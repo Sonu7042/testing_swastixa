@@ -73,8 +73,8 @@ const VideoCard = ({ src }) => {
           controls
           preload="metadata"
           className="w-full h-full object-cover"
-          onLoadedData={() => setIsReady(true)}
           onCanPlay={() => setIsReady(true)}
+          onError={() => setIsReady(false)}
         >
           <source src={src} type="video/mp4" />
         </video>

@@ -1,5 +1,6 @@
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import Tilt from "react-parallax-tilt";
+import OptimizedVideo from "../common/OptimizedVideo";
 
 // Local Video Assets
 import video1 from "../../assets/workhero/work-page-05-01.mp4";
@@ -88,68 +89,12 @@ const videoCards = [
 ];
 
 const VideoCard = ({ src, className, shadowColor = "rgba(0,0,0,0.5)" }) => {
-  const containerRef = useRef(null);
-  const videoRef = useRef(null);
-  const [shouldLoad, setShouldLoad] = useState(true); // Hero videos load immediately
-  const [isReady, setIsReady] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          videoRef.current?.play().catch(() => { });
-        } else {
-          videoRef.current?.pause();
-        }
-      },
-      {
-        rootMargin: "200px",
-        threshold: 0.1,
-      }
-    );
-
-    if (containerRef.current) observer.observe(containerRef.current);
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <div
-      ref={containerRef}
       className={`${className} overflow-hidden bg-neutral-900 border border-white/5 backdrop-blur-sm transition-opacity duration-700`}
       style={{ boxShadow: `0 10px 30px ${shadowColor}` }}
     >
-      {shouldLoad && (
-        // <video
-        //   ref={videoRef}
-        //   src={src}
-        //   muted
-        //   loop
-        //   playsInline
-        //   preload="auto"
-        //   onCanPlay={() => setIsReady(true)}
-        //   className={`w-full h-full object-cover transition-opacity duration-700 ${isReady ? "opacity-100" : "opacity-0"}`}
-        // />
-        <video
-          ref={videoRef}
-          src={src}
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          poster="/thumb.jpg"
-          className="w-full h-full object-cover"
-        />
-      )}
-      {/* {!isReady && (
-        <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-          <div className="w-8 h-8 border-2 border-white/20 border-t-white rounded-full animate-spin"></div>
-        </div>
-      )} */}
-      {/* {!isReady && (
-        <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-          <div className="w-8 h-8 border-2 border-white/20 border-t-white rounded-full animate-spin"></div>
-        </div>
-      )} */}
+      <OptimizedVideo src={src} loop className="w-full h-full object-cover" />
     </div>
   );
 };
