@@ -12,7 +12,7 @@ import video5 from "../../assets/workhero/work-page-05-05.mp4";
 const videoCards = [
   {
     id: 1,
-    src: video1,
+    src: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/production-house-video/swastixa-five-video/swastixa-about-one-video.mp4",
     mobileBg: "bg-[#2f2d2d]",
     className: `
       absolute 
@@ -27,7 +27,7 @@ const videoCards = [
   },
   {
     id: 2,
-    src: video2,
+    src: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/production-house-video/swastixa-five-video/swastixa-about-two-video.mp4",
     mobileBg: "bg-[#ededed]",
     className: `
       absolute 
@@ -42,7 +42,7 @@ const videoCards = [
   },
   {
     id: 3,
-    src: video3,
+    src: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/production-house-video/swastixa-five-video/swastixa-about-three-video.mp4",
     mobileBg: "bg-[#bdb9b9]",
     className: `
       relative
@@ -56,7 +56,7 @@ const videoCards = [
   },
   {
     id: 4,
-    src: video4,
+    src: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/production-house-video/swastixa-five-video/swastixa-about-four-video.mp4",
     mobileBg: "bg-[#d9d9d9]",
     className: `
       absolute
@@ -72,7 +72,7 @@ const videoCards = [
   },
   {
     id: 5,
-    src: video5,
+    src: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/production-house-video/swastixa-five-video/swastixa-about-five-video.mp4",
     mobileBg: "bg-[#625f5f]",
     className: ` 
       absolute
