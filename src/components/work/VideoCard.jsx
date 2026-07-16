@@ -9,6 +9,7 @@ const VideoCard = ({ src }) => {
   const [shouldLoad, setShouldLoad] = useState(false);
   const [isReady, setIsReady] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [hasError, setHasError] = useState(false);
 
   // 👀 Observe visibility
   useEffect(() => {
@@ -18,7 +19,7 @@ const VideoCard = ({ src }) => {
 
         if (entry.isIntersecting) {
           setShouldLoad(true);
-        } else {
+        } else if (!videoRef.current?.paused) {
           videoRef.current?.pause();
         }
       },
@@ -32,10 +33,10 @@ const VideoCard = ({ src }) => {
     return () => observer.disconnect();
   }, []);
 
-  // ▶️ Play ONLY when ready + visible
+  // ▶️ Play ONLY when ready + visible, and only if not already playing
   useEffect(() => {
     const video = videoRef.current;
-    if (isVisible && isReady && video) {
+    if (isVisible && isReady && video && video.paused) {
       video.muted = true;
       video.play().catch(() => {});
     }
@@ -56,6 +57,7 @@ const VideoCard = ({ src }) => {
     <div
       ref={containerRef}
       className="
+        relative
         w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh]
         max-w-[95vw] md:max-w-[90vw] xl:max-w-[80vw]
         overflow-hidden rounded-xl bg-black
@@ -73,11 +75,23 @@ const VideoCard = ({ src }) => {
           controls
           preload="metadata"
           className="w-full h-full object-cover"
-          onCanPlay={() => setIsReady(true)}
-          onError={() => setIsReady(false)}
+          onCanPlay={() => {
+            setIsReady(true);
+            setHasError(false);
+          }}
+          onError={(e) => {
+            setIsReady(false);
+            setHasError(true);
+            console.error("Video failed to load:", src, e.currentTarget.error);
+          }}
         >
           <source src={src} type="video/mp4" />
         </video>
+      )}
+      {hasError && (
+        <div className="absolute inset-0 flex items-center justify-center text-white/60 text-sm pointer-events-none">
+          Video unavailable
+        </div>
       )}
     </div>
   );

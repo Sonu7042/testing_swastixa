@@ -7,6 +7,7 @@ const ReelItem = memo(({ item, index, isActive, onActive }) => {
     const [isHovered, setIsHovered] = useState(false);
     const [isPlaying, setIsPlaying] = useState(false);
     const [isLoaded, setIsLoaded] = useState(false);
+    const [hasError, setHasError] = useState(false);
     const [isInViewport, setIsInViewport] = useState(false);
     const [shouldLoad, setShouldLoad] = useState(false);
     const [isMobile, setIsMobile] = useState(
@@ -77,7 +78,7 @@ const ReelItem = memo(({ item, index, isActive, onActive }) => {
                         }
                     });
                 }
-            } else {
+            } else if (!video.paused) {
                 video.pause();
             }
         } else {
@@ -96,7 +97,7 @@ const ReelItem = memo(({ item, index, isActive, onActive }) => {
                     });
                 }
             } else {
-                video.pause();
+                if (!video.paused) video.pause();
                 video.currentTime = 0;
             }
         }
@@ -128,17 +129,30 @@ const ReelItem = memo(({ item, index, isActive, onActive }) => {
                     muted
                     playsInline
                     preload="metadata"
-                    onCanPlay={() => setIsLoaded(true)}
-                    onError={() => setIsLoaded(false)}
+                    onCanPlay={() => {
+                        setIsLoaded(true);
+                        setHasError(false);
+                    }}
+                    onError={(e) => {
+                        setIsLoaded(false);
+                        setHasError(true);
+                        console.error("Reel video failed to load:", item.video, e.currentTarget.error);
+                    }}
                     className={`w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-102 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
                 >
                     <source src={item.video} type="video/mp4" />
                 </video>
             )}
 
-            {!isLoaded && (
+            {!isLoaded && !hasError && (
                 <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-8 h-8 border-2 border-white/20 border-t-white rounded-full animate-spin" />
+                </div>
+            )}
+
+            {hasError && (
+                <div className="absolute inset-0 flex items-center justify-center text-white/50 text-xs px-3 text-center pointer-events-none">
+                    Video unavailable
                 </div>
             )}
 

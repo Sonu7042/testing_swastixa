@@ -2,13 +2,6 @@ import React from "react";
 import Tilt from "react-parallax-tilt";
 import OptimizedVideo from "../common/OptimizedVideo";
 
-// Local Video Assets
-import video1 from "../../assets/workhero/work-page-05-01.mp4";
-import video2 from "../../assets/workhero/work-page-05-02.mp4";
-import video3 from "../../assets/workhero/work-page-05-03.mp4";
-import video4 from "../../assets/workhero/work-page-05-04.mp4";
-import video5 from "../../assets/workhero/work-page-05-05.mp4";
-
 const videoCards = [
   {
     id: 1,
