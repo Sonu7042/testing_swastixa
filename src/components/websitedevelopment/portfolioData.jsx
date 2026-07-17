@@ -324,7 +324,7 @@ const PortfolioCarousel = () => {
   return (
     <section className="bg-black py-16 overflow-hidden">
       
-      <div className="relative">
+      <div className="portfolio-scroll-container relative overflow-x-auto snap-x snap-mandatory">
         <div
           className="
             marquee-track
@@ -332,12 +332,9 @@ const PortfolioCarousel = () => {
             w-max
             gap-4
             md:gap-12
-            overflow-x-auto
-            md:overflow-visible
+            overflow-visible
             px-4
             md:px-0
-            snap-x
-            snap-mandatory
             cursor-grab
             active:cursor-grabbing
           "
@@ -440,17 +437,19 @@ const PortfolioCarousel = () => {
           display: none;
         }
 
+        .portfolio-scroll-container {
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        .portfolio-scroll-container::-webkit-scrollbar {
+          display: none;
+        }
+
         @media (hover: hover) {
           .marquee-track:hover {
             animation-play-state: paused;
-          }
-        }
-
-        @media (max-width: 767px) {
-          .marquee-track {
-            width: max-content;
-            overflow: visible;
-            touch-action: pan-y;
           }
         }
 
