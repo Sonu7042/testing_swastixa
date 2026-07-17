@@ -26,7 +26,7 @@ const Reels = () => {
                 }>
                     <ReelsGrid reels={reelsData} />
                 </Suspense>
-            </div>
+            </div>    
         </main>
     );
 };
