@@ -40,13 +40,22 @@ const VideoPlayer = ({ src, poster }) => {
   // Observe visibility
   // ----------------------------
   useEffect(() => {
+    const isPhone = window.matchMedia("(max-width: 767px)").matches;
     const playObserver = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      {
-        threshold: 0.7,
-      }
+      isPhone
+        ? {
+            // On phones, play only while the video crosses the viewport's
+            // narrow center band as the user scrolls.
+            rootMargin: "-45% 0px -45% 0px",
+            threshold: 0,
+          }
+        : {
+            // Preserve the existing tablet/desktop behaviour.
+            threshold: 0.7,
+          }
     );
 
     if (containerRef.current) {
