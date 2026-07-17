@@ -1,6 +1,9 @@
 import React, { memo, useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
+const isSafariBrowser = typeof navigator !== 'undefined'
+    && /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
 const ReelItem = memo(({ item, index, isActive, onActive }) => {
     const videoRef = useRef(null);
     const [videoElement, setVideoElement] = useState(null);
@@ -9,7 +12,10 @@ const ReelItem = memo(({ item, index, isActive, onActive }) => {
     const [isLoaded, setIsLoaded] = useState(false);
     const [hasError, setHasError] = useState(false);
     const [isInViewport, setIsInViewport] = useState(false);
-    const [shouldLoad, setShouldLoad] = useState(false);
+    const [shouldLoad, setShouldLoad] = useState(() => {
+        if (!isSafariBrowser || typeof window === 'undefined') return false;
+        return index < (window.innerWidth < 768 ? 2 : 4);
+    });
     const [isMobile, setIsMobile] = useState(
         typeof window !== 'undefined' ? window.innerWidth < 430 : false
     );
@@ -47,9 +53,15 @@ const ReelItem = memo(({ item, index, isActive, onActive }) => {
     useEffect(() => {
         let timer;
         if (isInViewport) {
-            timer = setTimeout(() => {
+            const loadVideo = () => {
                 setShouldLoad(true);
-            }, 250); // Stagger loading to prevent network congestion
+            };
+
+            if (isSafariBrowser) {
+                loadVideo();
+            } else {
+                timer = setTimeout(loadVideo, 250); // Preserve existing browser behaviour
+            }
         } else {
             if (!isMobile) setIsPlaying(false);
             setIsHovered(false);
@@ -128,7 +140,7 @@ const ReelItem = memo(({ item, index, isActive, onActive }) => {
                     loop
                     muted
                     playsInline
-                    preload="metadata"
+                    preload={isSafariBrowser ? 'auto' : 'metadata'}
                     onCanPlay={() => {
                         setIsLoaded(true);
                         setHasError(false);

@@ -536,6 +536,14 @@ const ContactCareer = () => {
                                     className="bg-transparent border-b border-gray-700 py-4 focus:outline-none focus:border-white transition-colors placeholder:text-gray-600 resize-none"
                                 ></textarea>
                             </div>
+
+                            <button
+                                type="submit"
+                                disabled={loading}
+                                className={`mt-4 self-center border-b border-white pb-1 text-lg font-medium hover:text-gray-300 transition-colors cursor-pointer ${loading ? "opacity-50 cursor-not-allowed" : ""}`}
+                            >
+                                {loading ? "Sending..." : "Submit"}
+                            </button>
                         </div>
 
                         {/* Resume Upload Card */}
@@ -573,13 +581,6 @@ const ContactCareer = () => {
                             </div>
                         </div> */}
 
-                        <button
-                            type="submit"
-                            disabled={loading}
-                            className={`mt-4 self-center border-b border-white pb-1 text-lg font-medium hover:text-gray-300 transition-colors cursor-pointer ${loading ? "opacity-50 cursor-not-allowed" : ""}`}
-                        >
-                            {loading ? "Sending..." : "Submit"}
-                        </button>
                     </form>
                 )}
 

@@ -323,6 +323,7 @@ const duplicatedCards = [...portfolioData, ...portfolioData];
 const PortfolioCarousel = () => {
   return (
     <section className="bg-black py-16 overflow-hidden">
+      
       <div className="relative">
         <div
           className="
@@ -439,16 +440,17 @@ const PortfolioCarousel = () => {
           display: none;
         }
 
-        .marquee-track:hover {
-          animation-play-state: paused;
+        @media (hover: hover) {
+          .marquee-track:hover {
+            animation-play-state: paused;
+          }
         }
 
         @media (max-width: 767px) {
           .marquee-track {
-            animation: none;
-            width: auto;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
+            width: max-content;
+            overflow: visible;
+            touch-action: pan-y;
           }
         }
 

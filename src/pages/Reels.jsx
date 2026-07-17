@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { reelsData } from '../data/reelsData.js';
 import Smmbutton from '../components/work/Smmbutton.jsx';
@@ -7,6 +7,23 @@ const ReelsGrid = lazy(() => import('../components/work/ReelsGrid.jsx'));
 
 const Reels = () => {
     const navigate = useNavigate();
+
+    useEffect(() => {
+        const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+        if (!isSafari) return undefined;
+
+        // Open the media connection early so Safari does not wait until the
+        // first reel enters the viewport before starting its TLS handshake.
+        const videoHost = new URL(reelsData[0]?.video || '', window.location.href).origin;
+        if (videoHost === window.location.origin) return undefined;
+
+        const preconnect = document.createElement('link');
+        preconnect.rel = 'preconnect';
+        preconnect.href = videoHost;
+        document.head.appendChild(preconnect);
+
+        return () => preconnect.remove();
+    }, []);
 
     return (
         <main className="bg-black min-h-screen pt-24 md:pt-40">
