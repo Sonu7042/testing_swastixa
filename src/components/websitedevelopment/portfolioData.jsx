@@ -370,8 +370,8 @@ const PortfolioCarousel = () => {
                 >
                   <img
                     src={item.image}
-                    alt=""
-                    className="
+                    alt=""                          
+                    className="        
                       w-full
                       h-full
                       object-cover
