@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { Plus, Minus } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const faqs = [
@@ -47,7 +47,7 @@ export default function FAQSection() {
             <div className="max-w-4xl mx-auto px-6">
                 {/* Heading */}
                 <div className="text-center mb-12">
-                    <span className="text-white text-sm font-medium">
+                    <span className="text-white lg:text-[24px] text-[20px]  font-medium">
                         Everything You Need to Know
                     </span>
                 </div>
@@ -89,22 +89,31 @@ export default function FAQSection() {
                                     <span
                                         className="
                       text-white
-                      text-[18px]
+                      lg:text-[18px]
+                      text-mb
                       font-medium
                     "
                                     >
                                         {faq.question}
                                     </span>
 
-                                    <ChevronDown
-                                        size={18}
-                                        className={`
-                      text-white/60
-                      transition-transform
-                      duration-300
-                      ${isOpen ? "rotate-180" : ""}
-                    `}
-                                    />
+                                   <div
+  className="relative flex items-center justify-center
+             w-4 h-4 sm:w-5 sm:h-5
+             flex-shrink-0"
+>
+  {/* Horizontal Line */}
+  <span
+    className="absolute w-full h-[2px] rounded-full bg-white"
+  />
+
+  {/* Vertical Line */}
+  <span
+    className={`absolute h-full w-[2px] rounded-full bg-white
+      transition-all duration-300 ease-in-out
+      ${isOpen ? "scale-y-0 opacity-0" : "scale-y-100 opacity-100"}`}
+  />
+</div>
                                 </button>
 
                                 <AnimatePresence initial={false}>
@@ -132,7 +141,8 @@ export default function FAQSection() {
                             text-[#9A9A9A]
                             text-[15px]
                             leading-8
-                            max-w-[95%]
+                            lg:max-w-[95%]
+                            max-w-full
                           "
                                                 >
                                                     {faq.answer}
