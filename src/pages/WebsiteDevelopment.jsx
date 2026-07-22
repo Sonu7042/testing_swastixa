@@ -13,11 +13,11 @@ const WebsiteDevelopment = () => {
     return (
         <div className="bg-black min-h-screen">
             <ExcellenceHero />
-            <PortfolioCarousel />
             <WhyChooseUs />
             <HowWeWork />
-            <LogoCarousel />
             <ServiceCards />
+            <PortfolioCarousel />
+            <LogoCarousel />
             <FAQSection />
             <CTASection />
         </div>

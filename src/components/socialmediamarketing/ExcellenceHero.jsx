@@ -3,14 +3,33 @@ import { useNavigate } from "react-router-dom";
 
 const ExcellenceHero = () => {
   const navigate = useNavigate();
+
   return (
-    <section className="bg-black min-h-screen flex items-center overflow-hidden">
+    <section className="min-h-screen mb-10 overflow-hidden">
       <div className="max-w-[1400px] mx-auto w-full px-6 md:px-12 lg:px-20">
+
+        {/* CENTER TITLE */}
+        <div className="text-center pt-20 lg:pt-24 pb-20">
+          <h2
+            className="
+              text-white
+              font-bold
+              leading-none
+              text-[44px]
+              sm:text-[56px]
+              md:text-[72px]
+              lg:text-[96px]
+            "
+          >
+            Social Media Marketing
+          </h2>
+        </div>
+
+        {/* CONTENT */}
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
           {/* LEFT CONTENT */}
           <div className="max-w-[520px]">
-            <h2 className="text-[#8B8B8B]">Social Media Marketing</h2>
 
             <h1
               className="
@@ -26,7 +45,6 @@ const ExcellenceHero = () => {
             >
               Build a Stronger Brand Presence Across Platforms
             </h1>
-            
 
             <p
               className="
@@ -39,6 +57,7 @@ const ExcellenceHero = () => {
             >
               Social media is where your audience discovers, interacts with, and remembers your brand. As a Social Media Marketing Agency, Swastixa helps businesses build a strong and consistent presence across platforms through strategic content, creative storytelling, and engagement-led communication.
             </p>
+
             <p
               className="
                 mt-3
@@ -64,6 +83,7 @@ const ExcellenceHero = () => {
                 duration-300
                 hover:bg-[#2A2A2E]
                 hover:scale-[1.02]
+                cursor-pointer
               "
               onClick={() => {
                 navigate("/#contact");
@@ -72,8 +92,6 @@ const ExcellenceHero = () => {
               Start Our Project
             </button>
 
-            {/* TRUSTED BY */}
-           
           </div>
 
           {/* RIGHT VISUAL */}
@@ -81,7 +99,6 @@ const ExcellenceHero = () => {
 
             <div className="relative w-full max-w-[560px]">
 
-              {/* IMAGE CARD */}
               <div
                 className="
                   overflow-hidden
@@ -89,11 +106,10 @@ const ExcellenceHero = () => {
                   shadow-[0_20px_80px_rgba(255,255,255,0.04)]
                 "
               >
-                
                 <img
                   src="https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-all-eight-pages-images/swastixa-service-social-media-marketing.webp"
                   alt="Team Meeting"
-                  className="   
+                  className="
                     w-full
                     h-[420px]
                     md:h-[480px]
@@ -105,12 +121,12 @@ const ExcellenceHero = () => {
                 />
               </div>
 
-              {/* CODE CARD */}
-
             </div>
+
           </div>
 
         </div>
+
       </div>
     </section>
   );

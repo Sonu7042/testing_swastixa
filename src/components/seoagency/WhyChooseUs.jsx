@@ -39,15 +39,15 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-black py-24">
+    <section className="py-24">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-white text-sm font-medium tracking-wide">
+          <span className="text-white text-[32px] sm:[20px] font-semibold">
             Why Choose Us
           </span>
 
-          <p className="max-w-[650px] mx-auto mt-4 text-[#8F8F8F] text-[16px] leading-relaxed">
+          <p className="max-w-[650px] mx-auto mt-3 text-[#A1A1A1] text-[18px]">
             Our methodology is rooted in speed, security, and scalability.
             We don't just build websites; we build digital assets.
           </p>
@@ -117,12 +117,12 @@ export default function WhyChooseUs() {
                 {/* Title */}
                 <h3              
                   className="      
-                    relative    
+                    relative
                     z-10
                     text-white
                     text-[20px]
                     font-medium
-                    mb-5
+                    mb-1.5
                   "
                 >
                   {item.title}
@@ -131,11 +131,12 @@ export default function WhyChooseUs() {
                 {/* Description */}
                 <p
                   className="
-                    relative
+                     relative
                     z-10
                     text-[#8B8B8B]
-                    text-[15px]
-                    leading-7
+                    text-sm
+                    lg:text-[15px]
+                    leading-relaxed
                   "
                 >
                   {item.description}

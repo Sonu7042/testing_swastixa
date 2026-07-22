@@ -47,7 +47,7 @@ export default function FAQSection() {
             <div className="max-w-4xl mx-auto px-6">
                 {/* Heading */}
                 <div className="text-center mb-12">
-                    <span className="text-white lg:text-[24px] text-[20px]  font-medium">
+                    <span className="text-white lg:text-[32px] text-[20px]  font-medium">
                         Everything You Need to Know
                     </span>
                 </div>
@@ -84,6 +84,7 @@ export default function FAQSection() {
                     px-6
                     py-6
                     text-left
+                    cursor-pointer
                   "
                                 >
                                     <span

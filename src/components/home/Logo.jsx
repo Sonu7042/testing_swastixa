@@ -177,7 +177,7 @@ export default function LogoCarousel() {
       : "grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-10 md:gap-14 lg:gap-20";
 
   return (
-    <div className="min-h-1/2 sm:min-h-screen w-full flex items-center justify-center py-10">
+    <div className="min-h-1/2 sm:min-h-screen w-full flex items-center justify-center">
       <div className="w-full max-w-[1250px] px-4">
         <div className={gridClasses}>
           {currentIcons.map((icon, idx) => (

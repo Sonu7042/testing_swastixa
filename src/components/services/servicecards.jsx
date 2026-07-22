@@ -62,13 +62,13 @@ const ServiceCards = () => {
   const filteredServices = serviceList.filter(service => service.path !== location.pathname);
 
   return (
-    <section data-aos="fade-up" data-aos-duration="1500" className="bg-black text-white pb-6 pt-2  px-6 sm:px-12 lg:px-24 xl:px-32 flex flex-col items-start text-left w-full select-none">
+    <section data-aos="fade-up" data-aos-duration="1500" className="bg-black text-white  px-6 sm:px-12 lg:px-24 xl:px-32 flex flex-col items-start text-left w-full select-none py-24">
       {/* Upper Title Section */}
 
 
       {/* Sub Title Section */}
-      <div className="mb-8">
-        <span className="text-[#71717a] text-[11px] font-semibold uppercase tracking-[0.2em] block mb-1.5">
+      <div className="mb-12">
+        <span className="text-[#CECECE] text-[14px] font-bold uppercase tracking-[0.2em] block mb-1.5">
            {location.pathname === "/services" || location.pathname === "/" ? "Our Services" : "Our Other Services"}
         </span>
         <h2 className="text-2xl sm:text-[32px] font-extrabold tracking-tight text-white leading-tight">
@@ -87,10 +87,10 @@ const ServiceCards = () => {
           >
             {/* Number */}
             <div className="text-[#71717a] group-hover:text-[#a1a1aa] font-medium text-base mb-3 transition-colors duration-300">
-              {service.number}
+              0{index + 1}
             </div>
 
-            <h3 className="text-white pb-1.5 group-hover:text-blue-400 font-semibold text-lg sm:text-[20px] tracking-tight transition-colors duration-300 mt-auto">
+            <h3 className="text-white pb-1.5 group-hover:text-blue-400 font-medium text-lg sm:text-[20px] tracking-tight transition-colors duration-300 mt-auto">
               {service.title}
             </h3>
             {/* Description */}

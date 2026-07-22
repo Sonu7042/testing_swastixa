@@ -17,8 +17,8 @@ const SeoAgency = () => {
             <WhyChooseUs />
             <HowWeWork />
             {/* <CaseStudies /> */}
-            <LogoCarousel />
             <ServiceCards />
+            <LogoCarousel />
             <FAQSection />
             <CTASection />
         </div>
