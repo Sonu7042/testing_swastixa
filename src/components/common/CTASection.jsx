@@ -23,7 +23,7 @@ const CTASection = () => {
                     </h2>
 
                     <button
-                        className="mt-5 bg-black text-white text-[11px] font-semibold px-7 py-3 rounded-[4px]"
+                        className="mt-5  text-[11px] font-semibold px-7 py-2 rounded-[12px] border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300"
                         onClick={() => {
                             navigate("/#contact");
                         }}

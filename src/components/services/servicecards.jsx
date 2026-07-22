@@ -72,7 +72,7 @@ const ServiceCards = () => {
            {location.pathname === "/services" || location.pathname === "/" ? "Our Services" : "Our Other Services"}
         </span>
         <h2 className="text-2xl sm:text-[32px] font-extrabold tracking-tight text-white leading-tight">
-          Everything Your Brand Needs
+          Everything Else Your Brand Needs
         </h2>
       </div>
 

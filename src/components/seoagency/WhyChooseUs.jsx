@@ -115,12 +115,12 @@ export default function WhyChooseUs() {
                 </div>
 
                 {/* Title */}
-                <h3
-                  className="
-                    relative
+                <h3              
+                  className="      
+                    relative    
                     z-10
                     text-white
-                    text-[24px]
+                    text-[20px]
                     font-medium
                     mb-5
                   "

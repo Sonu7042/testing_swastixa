@@ -73,9 +73,9 @@ export default function WhyChooseUs() {
                   p-7
                   overflow-hidden
                   transition-all
-                  duration-500
+                  duration-500           
                   hover:-translate-y-2
-                  hover:border-white/20
+                  hover:border-white/20                  
                   hover:shadow-[0_25px_60px_rgba(0,0,0,0.5)]
                 "
               >
@@ -119,7 +119,7 @@ export default function WhyChooseUs() {
                     relative
                     z-10
                     text-white
-                    text-[24px]
+                    text-[20px]
                     font-medium
                     mb-5
                   "
