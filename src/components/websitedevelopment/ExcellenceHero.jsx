@@ -9,9 +9,20 @@ const ExcellenceHero = () => {
       <div className="max-w-[1400px] mx-auto w-full px-6 md:px-12 lg:px-20">
 
         {/* CENTER TITLE */}
-        <div className="text-center pt-20 lg:pt-24 pb-16">
-          <h2 className="text-white text-[96px] font-bold">Website Development</h2>
-
+        <div className="text-center pt-20 lg:pt-24 pb-20">
+          <h2
+            className="
+              text-white
+              font-bold
+              leading-none
+              text-[44px]
+              sm:text-[56px]
+              md:text-[72px]
+              lg:text-[96px]
+            "
+          >
+            Website Development
+          </h2>
         </div>
 
         {/* CONTENT */}
@@ -21,28 +32,27 @@ const ExcellenceHero = () => {
           <div className="max-w-[520px]">
 
             <h1
-            className="
-              text-white
-              uppercase
-              font-medium
-              tracking-[4px]
-              text-[20px]
-              md:text-[24px]
-              lg:text-[32px]
-              leading-[1.15]
-              mt-2
-            "
-          >
-            Create Websites That Look Good and Perform Better
-          </h1>
+              className="
+                text-white
+                uppercase
+                font-medium
+                tracking-[4px]
+                text-[20px]
+                md:text-[24px]
+                lg:text-[32px]
+                leading-[1.15]
+              "
+            >
+              Create Websites That Look Good and Perform Better
+            </h1>
 
             <p
               className="
+                mt-6
                 text-[#8B8B8B]
                 text-[15px]
                 leading-[1.9]
                 max-w-[600px]
-                mt-6
               "
             >
               Your website is often the first serious interaction people have with your brand. It should not only look professional but also be easy to use, responsive, fast, and built to support your business goals. As a website designing company in India, Swastixa creates modern websites rooted in seamless user experiences and strong digital performance.

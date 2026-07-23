@@ -6,7 +6,24 @@ const CTASection = () => {
 
     return (
         <section className="bg-black p-[10px] sm:p-[20px] md:p-[30px] lg:p-[40px] xl:p-[50px] 2xl:px-[130px]" >
-            <div className="bg-[#232323] rounded-[18px] min-h-[300px]  flex items-center justify-between px-[42px] relative"
+            <div
+  className="
+    bg-[#232323]
+    rounded-[18px]
+    min-h-[300px]
+    flex
+    flex-col
+    lg:flex-row
+    items-start
+    lg:items-center
+    justify-between
+    px-6
+    sm:px-8
+    lg:px-[42px]
+    py-8
+    lg:py-0
+    relative
+  "
                   style={{
                      backgroundImage: "url('https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixadigital/swastixa-ad-section-bg-images/swastixa-ad-bg-image.jpeg')",
                      backgroundSize: "cover",
@@ -16,25 +33,25 @@ const CTASection = () => {
 
                 {/* Left Content */}
                 <div>
-                    <h2 className="text-white text-[21px] sm:text-[24px] md:text-[42px] font-normal leading-[1.05] tracking-[-0.02em]">
+                    <h2 className="text-white text-[28px] sm:text-[30px] md:text-[42px] font-normal leading-[1.05] tracking-[-0.02em]">
                         Ready to build the future of
                         <br />
                         your business?
                     </h2>
 
                     <button
-                        className="mt-5  text-[11px] font-semibold px-7 py-2 rounded-[12px] border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300"
-                        onClick={() => {
-                            navigate("/#contact");
-                        }}
-                    >
-                        Contact Us
-                    </button>
+  className="mt-5 text-[11px] font-bold px-7 py-2 rounded-[10px] border border-white/70 bg-white/5 backdrop-blur-sm text-white backdrop-blur-sm hover:bg-white hover:text-black hover:border-white transition-all duration-300 cursor-pointer"
+  onClick={() => {
+    navigate("/#contact");
+  }}
+>
+  Contact Us
+</button>
                 </div>
 
 
                 {/* Right Social Icons */}
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-row lg:flex-col gap-3 lg:gap-4 mt-8 lg:mt-0">
                     <a
                         target="_blank"
                         href="https://www.facebook.com/share/1BavrtTDFV/"

@@ -16,8 +16,8 @@ const SocialMediaMarketingAgency = () => {
             <WhyChooseUs />
             <HowWeWork />
             {/* <CaseStudies /> */}
-            <LogoCarousel />
             <ServiceCards />
+            <LogoCarousel />
             <FAQSection />
             <CTASection />
         </div>

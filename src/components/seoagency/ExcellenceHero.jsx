@@ -3,14 +3,33 @@ import { useNavigate } from "react-router-dom";
 
 const ExcellenceHero = () => {
   const navigate = useNavigate();
+
   return (
-    <section className="bg-black min-h-screen flex items-center overflow-hidden">
+    <section className="min-h-screen mb-10 overflow-hidden">
       <div className="max-w-[1400px] mx-auto w-full px-6 md:px-12 lg:px-20">
+
+        {/* CENTER TITLE */}
+        <div className="text-center pt-20 lg:pt-24 pb-20">
+          <h2
+            className="
+              text-white
+              font-bold
+              leading-none
+              text-[44px]
+              sm:text-[56px]
+              md:text-[72px]
+              lg:text-[96px]
+            "
+          >
+            SEO Agency
+          </h2>
+        </div>
+
+        {/* CONTENT */}
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
           {/* LEFT CONTENT */}
           <div className="max-w-[520px]">
-            <h2 className="text-[#8B8B8B]">SEO Agency</h2>
 
             <h1
               className="
@@ -26,7 +45,6 @@ const ExcellenceHero = () => {
             >
               Turn Search Traffic into Business Growth
             </h1>
-            
 
             <p
               className="
@@ -37,8 +55,14 @@ const ExcellenceHero = () => {
                 max-w-[600px]
               "
             >
-              Your audience is already searching for products, services, and solutions like yours. The right SEO strategy helps your brand appear where it matters most and brings qualified traffic to your website. At Swastixa, we create SEO strategies that improve search visibility, strengthen your digital presence, and help your business grow organically.
+              Your audience is already searching for products, services, and
+              solutions like yours. The right SEO strategy helps your brand
+              appear where it matters most and brings qualified traffic to your
+              website. At Swastixa, we create SEO strategies that improve search
+              visibility, strengthen your digital presence, and help your
+              business grow organically.
             </p>
+
             <p
               className="
                 mt-3
@@ -48,9 +72,9 @@ const ExcellenceHero = () => {
                 max-w-[600px]
               "
             >
-              As an SEO agency, we focus on building long-term organic growth through a mix of keyword planning, technical improvements, content optimisation, and performance tracking. 
-
-
+              As an SEO agency, we focus on building long-term organic growth
+              through a mix of keyword planning, technical improvements, content
+              optimisation, and performance tracking.
             </p>
 
             <button
@@ -66,6 +90,7 @@ const ExcellenceHero = () => {
                 duration-300
                 hover:bg-[#2A2A2E]
                 hover:scale-[1.02]
+                cursor-pointer
               "
               onClick={() => {
                 navigate("/#contact");
@@ -74,8 +99,6 @@ const ExcellenceHero = () => {
               Start Our Project
             </button>
 
-            {/* TRUSTED BY */}
-           
           </div>
 
           {/* RIGHT VISUAL */}
@@ -83,7 +106,6 @@ const ExcellenceHero = () => {
 
             <div className="relative w-full max-w-[560px]">
 
-              {/* IMAGE CARD */}
               <div
                 className="
                   overflow-hidden
@@ -106,12 +128,12 @@ const ExcellenceHero = () => {
                 />
               </div>
 
-              {/* CODE CARD */}
-
             </div>
+
           </div>
 
         </div>
+
       </div>
     </section>
   );
