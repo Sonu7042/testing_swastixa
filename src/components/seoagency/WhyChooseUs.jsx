@@ -13,7 +13,7 @@ import {
 const features = [
   {
     icon: Palette,
-    title: "Strategies Built for Rankings",
+    title: "Strategies That Deliver",
     description:
       "We don't rely on shortcuts. Every SEO strategy is backed by research, search intent, and proven techniques that help your business climb the rankings.",
   },
@@ -25,7 +25,7 @@ const features = [
   },
   {
     icon: Zap,
-    title: "SEO Tailored to Your Business",
+    title: "Tailored SEO",
     description:
       "No two businesses are the same. We create customized SEO roadmaps aligned with your industry, audience, and goals.",
   },

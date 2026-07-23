@@ -122,7 +122,7 @@ export default function LogoCarousel() {
   const [page, setPage] = useState(0);
   const [iconsPerPage, setIconsPerPage] = useState(ICONS_PER_PAGE_DEFAULT);
 
-  // 1) handle resize -> set iconsPerPage
+  // 1) handle resize -> set iconsPerPage     
   useEffect(() => {
     function handleResize() {
       if (window.innerWidth <= MOBILE_BREAKPOINT) {
