@@ -4,31 +4,56 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const faqs = [
     {
-        question: "What is your typical project timeline?",
+        question: "What does an SEO agency do?",
         answer:
-            "Our standard engagements last between 8 to 14 weeks. This includes the full discovery, design, development, and QA phases. Complex enterprise platforms may require a longer roadmap.",
+            "An SEO agency improves your website's visibility on search engines like Google through keyword research, on-page optimisation, technical SEO, content strategy, and link-building. The goal is to attract relevant organic traffic and generate qualified leads.",
     },
     {
-        question: "Do you offer post-launch support?",
+        question: "Why is SEO important for my business?",
         answer:
-            "Yes. We provide ongoing maintenance, performance monitoring, security updates, and feature enhancements after launch.",
+            "SEO helps your business appear when potential customers search for your products or services. It increases website traffic, builds credibility, improves user experience, and delivers long-term growth without relying solely on paid advertising.",
     },
     {
-        question: "Can you work with our existing brand guidelines?",
+        question: "How long does SEO take to show results?",
         answer:
-            "Absolutely. We can seamlessly integrate your existing brand system while improving user experience and digital consistency.",
+            "SEO is a long-term strategy. While timelines vary based on your industry, competition, and website health, most businesses begin seeing measurable improvements within 3 to 6 months.",
     },
     {
-        question: "Do you handle SEO optimization?",
+        question: "What SEO services do you offer?",
         answer:
-            "Yes. Technical SEO, Core Web Vitals optimization, structured data, and content recommendations are included where required.",
+            "We offer comprehensive SEO services, including keyword research, technical SEO audits, on-page optimisation, content optimisation, local SEO, link-building, competitor analysis, and monthly performance reporting.",
     },
     {
-        question: "What technologies do you use?",
+        question: "Do you provide local SEO services?",
         answer:
-            "We primarily work with React, Next.js, Node.js, Tailwind CSS, TypeScript, PostgreSQL, and cloud infrastructure platforms.",
+            "Yes. We optimise your online presence to improve visibility in local search results through Google Business Profile optimisation, location-specific keywords, local citations, and reputation management.",
     },
-];
+    {
+        question: "Can SEO help generate more leads?",
+        answer:
+            "Absolutely. By attracting users who are actively searching for your products or services, SEO helps bring high-intent visitors to your website, increasing the likelihood of enquiries, leads, and conversions.",
+    },
+    {
+        question: "Do you optimise existing websites or build SEO from scratch?",
+        answer:
+            "We do both. Whether you have an existing website that needs optimisation or you're launching a new one, we develop an SEO strategy tailored to your business goals.",
+    },
+    {
+        question: "How do you choose the right keywords?",
+        answer:
+            "We conduct detailed keyword research based on search intent, competition, industry trends, and your target audience to identify terms that can drive relevant traffic and business growth.",
+    },
+    {
+        question: "Will my website rank #1 on Google?",
+        answer:
+            "No ethical SEO agency can guarantee a #1 ranking. Search rankings depend on many factors, including competition and search engine algorithms. Our focus is on sustainable strategies that improve visibility, traffic, and business outcomes over time.",
+    },
+    {
+        question: "How do you measure SEO success?",
+        answer:
+            "We monitor key performance indicators such as keyword rankings, organic traffic, click-through rates, user engagement, lead generation, and conversions, providing transparent monthly reports with actionable insights.",
+    },
+    ];
 
 export default function FAQSection() {
     const [openIndex, setOpenIndex] = useState(0);
@@ -154,7 +179,7 @@ export default function FAQSection() {
     className="
         text-[#9A9A9A]
         text-[15px]
-        leading-8
+        leading-6
         lg:max-w-[95%]
         max-w-full
     "

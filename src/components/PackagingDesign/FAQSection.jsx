@@ -4,29 +4,29 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const faqs = [
     {
-        question: "What is your typical project timeline?",
+        question: "What packaging design services do you offer?",
         answer:
-            "Our standard engagements last between 8 to 14 weeks. This includes the full discovery, design, development, and QA phases. Complex enterprise platforms may require a longer roadmap.",
+            "We design product packaging, labels, boxes, brand collaterals, brochures, and print-ready packaging solutions.",
     },
     {
-        question: "Do you offer post-launch support?",
+        question: "How do you ensure packaging reflects my brand?",
         answer:
-            "Yes. We provide ongoing maintenance, performance monitoring, security updates, and feature enhancements after launch.",
+            "We study your product, target audience, competitors, and positioning to create packaging that aligns with your brand identity.",
     },
     {
-        question: "Can you work with our existing brand guidelines?",
+        question: "Can you redesign existing packaging?",
         answer:
-            "Absolutely. We can seamlessly integrate your existing brand system while improving user experience and digital consistency.",
+            "Yes. We refresh existing packaging to improve shelf appeal, clarity, and brand consistency.",
     },
     {
-        question: "Do you handle SEO optimization?",
+        question: "Do you provide print-ready artwork?",
         answer:
-            "Yes. Technical SEO, Core Web Vitals optimization, structured data, and content recommendations are included where required.",
+            "Yes. We deliver production-ready artwork that meets printing specifications and quality standards.",
     },
     {
-        question: "What technologies do you use?",
+        question: "Why is packaging design important?",
         answer:
-            "We primarily work with React, Next.js, Node.js, Tailwind CSS, TypeScript, PostgreSQL, and cloud infrastructure platforms.",
+            "Effective packaging improves product visibility, communicates value, builds brand recognition, and influences purchasing decisions.",
     },
 ];
 
@@ -154,7 +154,7 @@ export default function FAQSection() {
     className="
         text-[#9A9A9A]
         text-[15px]
-        leading-8
+        leading-6
         lg:max-w-[95%]
         max-w-full
     "

@@ -4,29 +4,29 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const faqs = [
     {
-        question: "What is your typical project timeline?",
+        question: "Why is content marketing important for businesses?",
         answer:
-            "Our standard engagements last between 8 to 14 weeks. This includes the full discovery, design, development, and QA phases. Complex enterprise platforms may require a longer roadmap.",
+            "Content marketing helps businesses build trust, improve online visibility, educate customers, and generate quality leads through valuable and relevant content.",
     },
     {
-        question: "Do you offer post-launch support?",
+        question: "What types of content do you create?",
         answer:
-            "Yes. We provide ongoing maintenance, performance monitoring, security updates, and feature enhancements after launch.",
+            "We create website content, blogs, social media copy, emailers, campaign content, brochures, presentations, and brand storytelling tailored to your business goals.",
     },
     {
-        question: "Can you work with our existing brand guidelines?",
+        question: "Do you create SEO-friendly content?",
         answer:
-            "Absolutely. We can seamlessly integrate your existing brand system while improving user experience and digital consistency.",
+            "Yes. Our content is written with search intent, relevant keywords, readability, and user experience in mind to support organic visibility.",
     },
     {
-        question: "Do you handle SEO optimization?",
+        question: "How do you maintain a consistent brand voice?",
         answer:
-            "Yes. Technical SEO, Core Web Vitals optimization, structured data, and content recommendations are included where required.",
+            "We understand your business, audience, and communication style before creating content that reflects your brand across every platform.",
     },
     {
-        question: "What technologies do you use?",
+        question: "Can you create monthly content plans?",
         answer:
-            "We primarily work with React, Next.js, Node.js, Tailwind CSS, TypeScript, PostgreSQL, and cloud infrastructure platforms.",
+            "Yes. We develop monthly content calendars with planned topics, publishing schedules, and platform-specific content ideas.",
     },
 ];
 
@@ -154,7 +154,7 @@ export default function FAQSection() {
     className="
         text-[#9A9A9A]
         text-[15px]
-        leading-8
+        leading-6
         lg:max-w-[95%]
         max-w-full
     "

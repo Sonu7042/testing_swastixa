@@ -4,29 +4,29 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const faqs = [
     {
-        question: "What is your typical project timeline?",
+        question: "Which social media platforms do you manage?",
         answer:
-            "Our standard engagements last between 8 to 14 weeks. This includes the full discovery, design, development, and QA phases. Complex enterprise platforms may require a longer roadmap.",
+            "We manage platforms like Instagram, Facebook, LinkedIn, YouTube, and others based on your target audience and business objectives.",
     },
     {
-        question: "Do you offer post-launch support?",
+        question: "Do you create both content and creatives?",
         answer:
-            "Yes. We provide ongoing maintenance, performance monitoring, security updates, and feature enhancements after launch.",
+            "Yes. We provide content strategy, post copy, campaign ideas, creative direction, and content calendars for consistent communication.",
     },
     {
-        question: "Can you work with our existing brand guidelines?",
+        question: "Can you help increase engagement on social media?",
         answer:
-            "Absolutely. We can seamlessly integrate your existing brand system while improving user experience and digital consistency.",
+            "Yes. Our strategies focus on creating relevant content that encourages interaction, improves reach, and strengthens brand recall..",
     },
     {
-        question: "Do you handle SEO optimization?",
+        question: "Do you offer paid social media advertising?",
         answer:
-            "Yes. Technical SEO, Core Web Vitals optimization, structured data, and content recommendations are included where required.",
+            "Yes. We support Meta advertising campaigns with audience targeting, campaign planning, and performance optimisation.",
     },
     {
-        question: "What technologies do you use?",
+        question: "How do you measure social media performance?",
         answer:
-            "We primarily work with React, Next.js, Node.js, Tailwind CSS, TypeScript, PostgreSQL, and cloud infrastructure platforms.",
+            "We provide regular reports covering reach, engagement, audience growth, and campaign performance with actionable insights.",
     },
 ];
 
@@ -42,10 +42,10 @@ export default function FAQSection() {
             <div className="max-w-4xl mx-auto px-6">
                 {/* Heading */}
                 <div className="text-center mb-12">
-                    <span className="text-white text-sm font-medium">
-                        Everything You Need to Know
-                    </span>
-                </div>
+    <span className="text-white lg:text-[32px] text-[20px] font-medium">
+        Everything You Need to Know
+    </span>
+</div>
 
                 {/* Accordion */}
                 <div className="space-y-4">
@@ -154,7 +154,7 @@ export default function FAQSection() {
     className="
         text-[#9A9A9A]
         text-[15px]
-        leading-8
+        leading-6
         lg:max-w-[95%]
         max-w-full
     "

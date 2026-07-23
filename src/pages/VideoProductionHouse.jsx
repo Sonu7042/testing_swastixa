@@ -7,7 +7,7 @@ import ServiceCards from '../components/services/servicecards'
 import WhyChooseUs from '../components/videoproductionhouse/WhyChooseUs'
 import HowWeWork from '../components/videoproductionhouse/HowWeWork'
 // import CaseStudies from '../components/videoproductionhouse/caseStudies'
-import FAQSection from '../components/services/FAQSection'
+import FAQSection from '../components/videoproductionhouse/FAQSection'
 import CTASection from '../components/common/CTASection'
 
 const VideoProductionHouse = () => {

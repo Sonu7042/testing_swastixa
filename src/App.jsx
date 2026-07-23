@@ -40,6 +40,7 @@ import "./App.css";
 import ScrollToTop from "./components/common/ScrollToTop";
 import ScrollButton from "./components/common/ScrollButton";
 import CommingSoon from "./components/common/CommingSoon";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 // Smooth Scroll
 import Lenis from "lenis";
@@ -148,6 +149,7 @@ export default function App() {
           <Route path="/services/video-production-house" element={<VideoProductionHouse />} />
           <Route path="/services/influencer-marketing" element={<InfluencerMarketingAgency />} />
           <Route path="/services/packaging-design" element={<PackagingDesign />} />
+          <Route path="/PrivacyPolicy" element={<PrivacyPolicy/>}/>
         </Routes>
       </Suspense>
       {/* <Footer /> */}

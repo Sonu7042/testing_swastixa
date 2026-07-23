@@ -4,29 +4,29 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const faqs = [
     {
-        question: "What is your typical project timeline?",
+        question: "How do you choose influencers for a campaign?",
         answer:
-            "Our standard engagements last between 8 to 14 weeks. This includes the full discovery, design, development, and QA phases. Complex enterprise platforms may require a longer roadmap.",
+            "We shortlist creators based on audience relevance, content quality, engagement, platform suitability, and alignment with your brand values.",
     },
     {
-        question: "Do you offer post-launch support?",
+        question: "Do you work with both micro and macro influencers?",
         answer:
-            "Yes. We provide ongoing maintenance, performance monitoring, security updates, and feature enhancements after launch.",
+            "Yes. We recommend influencers based on your campaign goals, budget, and target audience.",
     },
     {
-        question: "Can you work with our existing brand guidelines?",
+        question: "Can you manage the entire influencer campaign?",
         answer:
-            "Absolutely. We can seamlessly integrate your existing brand system while improving user experience and digital consistency.",
+            "Yes. From creator selection and briefing to coordination, approvals, execution, and reporting, we manage the complete process.",
     },
     {
-        question: "Do you handle SEO optimization?",
+        question: "How do you measure influencer campaign performance?",
         answer:
-            "Yes. Technical SEO, Core Web Vitals optimization, structured data, and content recommendations are included where required.",
+            "We evaluate reach, engagement, impressions, audience response, and overall campaign impact.",
     },
     {
-        question: "What technologies do you use?",
+        question: "Is influencer marketing suitable for every business?",
         answer:
-            "We primarily work with React, Next.js, Node.js, Tailwind CSS, TypeScript, PostgreSQL, and cloud infrastructure platforms.",
+            "Influencer marketing can benefit many industries when paired with the right creators and a well-defined campaign objective.",
     },
 ];
 
@@ -154,7 +154,7 @@ export default function FAQSection() {
     className="
         text-[#9A9A9A]
         text-[15px]
-        leading-8
+        leading-6
         lg:max-w-[95%]
         max-w-full
     "

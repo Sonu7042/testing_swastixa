@@ -4,30 +4,30 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const faqs = [
     {
-        question: "What is your typical project timeline?",
+        question: "What types of websites do you develop?",
         answer:
-            "Our standard engagement ranges between 8 to 14 weeks. This includes discovery, design, development, content, testing, and launch depending on the project scope.",
+            "We build corporate websites, business websites, landing pages, portfolio websites, service websites, and product-focused websites..",
     },
     {
-        question: "Do you offer post-launch support?",
+        question: "Will my website be mobile-friendly?",
         answer:
-            "Yes. We offer post-launch support for updates, maintenance, performance checks, tracking, and optimisation.",
+            "Yes. Every website we develop is fully responsive and designed to perform smoothly across devices.",
     },
     {
-        question: "Can you work with our existing brand guidelines?",
+        question: "Do you build SEO-friendly websites?",
         answer:
-            "Yes. We can work within your existing brand guidelines while improving the digital experience, content flow, and overall brand communication.",
+            "Yes. Our websites are developed with SEO-ready structures, clean code, and user-friendly navigation to support better search visibility.",
     },
-    // {
-    //     question: "Do you handle SEO optimization?",
-    //     answer:
-    //         "Yes. Technical SEO, Core Web Vitals optimization, structured data, and content recommendations are included where required.",
-    // },
-    // {
-    //     question: "What technologies do you use?",
-    //     answer:
-    //         "We primarily work with React, Next.js, Node.js, Tailwind CSS, TypeScript, PostgreSQL, and cloud infrastructure platforms.",
-    // },
+    {
+        question: "Can you redesign my existing website?",
+        answer:
+            "Yes. We can redesign outdated websites to improve design, performance, user experience, and conversions.",
+    },
+    {
+        question: "Do you provide website maintenance?",
+        answer:
+            "Yes. We offer ongoing support to keep your website updated, secure, and performing efficiently.",
+    },
 ];
 
 export default function FAQSection() {
@@ -154,7 +154,7 @@ export default function FAQSection() {
     className="
         text-[#9A9A9A]
         text-[15px]
-        leading-8
+        leading-6
         lg:max-w-[95%]
         max-w-full
     "

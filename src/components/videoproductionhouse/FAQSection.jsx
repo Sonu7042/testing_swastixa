@@ -4,29 +4,29 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const faqs = [
     {
-        question: "What is your typical project timeline?",
+        question: "What types of videos do you produce?",
         answer:
-            "Our standard engagements last between 8 to 14 weeks. This includes the full discovery, design, development, and QA phases. Complex enterprise platforms may require a longer roadmap.",
+            "We produce brand films, corporate videos, product videos, social media reels, testimonials, campaign videos, and promotional content.",
     },
     {
-        question: "Do you offer post-launch support?",
+        question: "Do you handle the complete production process?",
         answer:
-            "Yes. We provide ongoing maintenance, performance monitoring, security updates, and feature enhancements after launch.",
+            "Yes. We manage concept development, scriptwriting, shoot planning, production, editing, graphics, and final delivery.",
     },
     {
-        question: "Can you work with our existing brand guidelines?",
+        question: "Can you create videos for social media?",
         answer:
-            "Absolutely. We can seamlessly integrate your existing brand system while improving user experience and digital consistency.",
+            "Absolutely. We create platform-specific videos and reels optimised for engagement across social media channels.",
     },
     {
-        question: "Do you handle SEO optimization?",
+        question: "How long does video production take?",
         answer:
-            "Yes. Technical SEO, Core Web Vitals optimization, structured data, and content recommendations are included where required.",
+            "Timelines depend on the project's scope, script complexity, and production requirements. We provide a clear schedule before execution.",
     },
     {
-        question: "What technologies do you use?",
+        question: "Do you help with video scripting?",
         answer:
-            "We primarily work with React, Next.js, Node.js, Tailwind CSS, TypeScript, PostgreSQL, and cloud infrastructure platforms.",
+            "Yes. We develop scripts that communicate your message clearly while keeping your audience engaged.",
     },
 ];
 
@@ -42,10 +42,10 @@ export default function FAQSection() {
             <div className="max-w-4xl mx-auto px-6">
                 {/* Heading */}
                 <div className="text-center mb-12">
-                    <span className="text-white text-sm font-medium">
-                        Everything You Need to Know
-                    </span>
-                </div>
+    <span className="text-white lg:text-[32px] text-[20px] font-medium">
+        Everything You Need to Know
+    </span>
+</div>
 
                 {/* Accordion */}
                 <div className="space-y-4">
@@ -154,7 +154,7 @@ export default function FAQSection() {
     className="
         text-[#9A9A9A]
         text-[15px]
-        leading-8
+        leading-6
         lg:max-w-[95%]
         max-w-full
     "

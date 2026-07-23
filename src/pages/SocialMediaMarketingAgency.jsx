@@ -6,7 +6,7 @@ import ServiceCards from '../components/services/servicecards'
 import WhyChooseUs from '../components/socialmediamarketing/WhyChooseUs'
 import HowWeWork from '../components/socialmediamarketing/HowWeWork'
 // import CaseStudies from '../components/socialmediamarketing/caseStudies'
-import FAQSection from "../components/services/FAQSection";
+import FAQSection from "../components/socialmediamarketing/FAQSection";
 import CTASection from '../components/common/CTASection'
 
 const SocialMediaMarketingAgency = () => {

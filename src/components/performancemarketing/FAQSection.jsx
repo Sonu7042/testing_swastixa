@@ -4,29 +4,29 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const faqs = [
     {
-        question: "What is your typical project timeline?",
+        question: "What is performance marketing?",
         answer:
-            "Our standard engagements last between 8 to 14 weeks. This includes the full discovery, design, development, and QA phases. Complex enterprise platforms may require a longer roadmap.",
+            "Performance marketing is a results-driven advertising approach where campaigns are optimised to achieve measurable goals like leads, sales, website traffic, or app installs.",
     },
     {
-        question: "Do you offer post-launch support?",
+        question: "Which advertising platforms do you manage?",
         answer:
-            "Yes. We provide ongoing maintenance, performance monitoring, security updates, and feature enhancements after launch.",
+            "We manage Google Ads, Meta Ads, remarketing campaigns, and conversion-focused digital advertising.",
     },
     {
-        question: "Can you work with our existing brand guidelines?",
+        question: "How do you optimise campaigns?",
         answer:
-            "Absolutely. We can seamlessly integrate your existing brand system while improving user experience and digital consistency.",
+            "We continuously monitor campaign performance, test different creatives and audiences, and optimise bids, targeting, and messaging for better results.",
     },
     {
-        question: "Do you handle SEO optimization?",
+        question: "Can performance marketing work for small businesses?",
         answer:
-            "Yes. Technical SEO, Core Web Vitals optimization, structured data, and content recommendations are included where required.",
+            "Yes. With the right strategy and budget, performance marketing can help businesses of all sizes reach qualified audiences efficiently.",
     },
     {
-        question: "What technologies do you use?",
+        question: "How do you track campaign success?",
         answer:
-            "We primarily work with React, Next.js, Node.js, Tailwind CSS, TypeScript, PostgreSQL, and cloud infrastructure platforms.",
+            "We track key metrics such as impressions, clicks, conversions, cost per lead, ROI, and overall campaign performance.",
     },
 ];
 
@@ -42,10 +42,10 @@ export default function FAQSection() {
             <div className="max-w-4xl mx-auto px-6">
                 {/* Heading */}
                 <div className="text-center mb-12">
-                    <span className="text-white text-sm font-medium">
-                        Everything You Need to Know
-                    </span>
-                </div>
+    <span className="text-white lg:text-[32px] text-[20px] font-medium">
+        Everything You Need to Know
+    </span>
+</div>
 
                 {/* Accordion */}
                 <div className="space-y-4">
@@ -154,7 +154,7 @@ export default function FAQSection() {
     className="
         text-[#9A9A9A]
         text-[15px]
-        leading-8
+        leading-6
         lg:max-w-[95%]
         max-w-full
     "
