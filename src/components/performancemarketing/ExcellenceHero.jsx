@@ -5,7 +5,7 @@ const ExcellenceHero = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="min-h-screen mb-10 overflow-hidden">
+    <section className="min-h-screen pt-24 mb-10 overflow-hidden">
       <div className="max-w-[1400px] mx-auto w-full px-6 md:px-12 lg:px-20">
 
         {/* CENTER TITLE */}

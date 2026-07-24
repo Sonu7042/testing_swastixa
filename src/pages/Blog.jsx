@@ -20,7 +20,7 @@ export default function BlogPage() {
 
   return (
     <>
-      <div className="relative z-0 w-full px-2 sm:px-4 md:px-10 lg:px-10 py-10 xl:px-24 bg-black overflow-hidden min-h-screen">
+      <div className="relative pt-24 z-0 w-full px-2 sm:px-4 md:px-10 lg:px-10 py-10 xl:px-24 bg-black overflow-hidden min-h-screen">
         {/* <BlogHeader /> */}
         <Particles
           particleBaseSize={120}

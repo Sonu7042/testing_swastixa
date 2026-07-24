@@ -9,7 +9,7 @@ import CTASection from "../components/common/CTASection";
 export default function Careers() {
   return (
     <>
-      <div className="relative z-0 w-full bg-black min-h-screen xl:px-20 px-0 pt-20 overflow-hidden">
+      <div className="relative z-0 w-full bg-black pt-24 min-h-screen xl:px-20 px-0 pt-20 overflow-hidden">
         {/* <CareersHero /> */}
         <Particles
           particleBaseSize={400}
