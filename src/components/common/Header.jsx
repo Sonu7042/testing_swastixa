@@ -101,7 +101,13 @@ export default function Navbar() {
   );
 
   return (
-    <nav className={`top-0 left-0 w-full flex justify-between items-center px-6 py-4 z-50 transition-colors duration-300 ${isHome ? "bg-white" : "bg-black"}`}>
+    <nav
+  className={`top-0 left-0 w-full flex justify-between items-center px-6 py-4 z-50 transition-all duration-300 ${
+    isHome
+      ? "bg-white"
+      : "bg-transparent absolute"
+  }`}
+>
       {/* ===== Logo ===== */}
       <Link
         to="/"
@@ -120,19 +126,31 @@ export default function Navbar() {
       </Link>
 
       <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="p-3 rounded-lg hover:bg-gray-200 transition z-50"
-      >
+  onClick={() => setIsOpen(!isOpen)}
+  className={`p-3 rounded-lg transition z-50 ${
+    isHome
+      ? "hover:bg-gray-200"
+      : "hover:bg-white/10"
+  }`}
+>
         <div className="space-y-1.5 relative w-6 h-6">
           <span
-            className={`block w-6 h-0.5 bg-gray-700 absolute left-0 transition-all duration-300 ${isOpen ? "rotate-45 top-3" : "top-1"}`}
-          />
-          <span
-            className={`block w-6 h-0.5 bg-gray-700 absolute left-0 transition-all duration-300 ${isOpen ? "opacity-0" : "top-3"}`}
-          />
-          <span
-            className={`block w-6 h-0.5 bg-gray-700 absolute left-0 transition-all duration-300 ${isOpen ? "-rotate-45 top-3" : "top-5"}`}
-          />
+  className={`block w-6 h-0.5 absolute left-0 transition-all duration-300 ${
+    isHome ? "bg-gray-700" : "bg-[#F0EADE]"
+  } ${isOpen ? "rotate-45 top-3" : "top-1"}`}
+/>
+
+<span
+  className={`block w-6 h-0.5 absolute left-0 transition-all duration-300 ${
+    isHome ? "bg-gray-700" : "bg-[#F0EADE]"
+  } ${isOpen ? "opacity-0" : "top-3"}`}
+/>
+
+<span
+  className={`block w-6 h-0.5 absolute left-0 transition-all duration-300 ${
+    isHome ? "bg-gray-700" : "bg-[#F0EADE]"
+  } ${isOpen ? "-rotate-45 top-3" : "top-5"}`}
+/>
         </div>
       </button>
 
