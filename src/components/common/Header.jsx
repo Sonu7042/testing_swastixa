@@ -105,7 +105,7 @@ export default function Navbar() {
   className={`top-0 left-0 w-full flex justify-between items-center px-6 py-4 z-50 transition-all duration-300 ${
     isHome
       ? "bg-white"
-      : "bg-transparent absolute"
+      : "bg-black relative"
   }`}
 >
       {/* ===== Logo ===== */}
