@@ -32,6 +32,7 @@ const ProductionHouse = () => {
   
   // default to "filmes" if tab is undefined or invalid
   const activeTab = tab === "construction" ? "construction" : "filmes";
+  // console.log(activeTab, "sonu")
 
   return (
     <main className="bg-black min-h-screen text-white">
