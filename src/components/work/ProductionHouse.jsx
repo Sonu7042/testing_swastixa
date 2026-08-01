@@ -26,12 +26,12 @@ const constructionVideos = [
   { id: 15, src: "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/production-house-video/swastixa-all-videos/sky-arc.mp4" },
 ];
 
-const ProductionHouse = () => {
+const ProductionHouse = () => {   
   const { tab } = useParams();
   const navigate = useNavigate();
   
   // default to "filmes" if tab is undefined or invalid
-  const activeTab = tab === "construction" ? "construction" : "filmes";
+  const activeTab = tab === "construction" ? "construction" : "filmes";                                               
   // console.log(activeTab, "sonu")
 
   return (
@@ -75,9 +75,9 @@ const ProductionHouse = () => {
       {/* Tab Content */}
       <div className="mt-10 min-h-[50vh]">
         {activeTab === "filmes" ? (
-          <VirtualVideoList />
+          <VirtualVideoList key="filmes" />
         ) : (
-          <VirtualVideoList videos={constructionVideos} />
+          <VirtualVideoList key="construction" videos={constructionVideos} />
         )}
       </div>                                          
     </main>
