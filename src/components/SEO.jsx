@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { seoData } from "../data/seoData";
 
@@ -26,32 +26,47 @@ const SEO = ({ title, description, image }) => {
   const finalImage =
     image || "https://swastixa.com/swastixa_192X192.png";
 
-  return (
-    <Helmet>
-      <title>{finalTitle}</title>
+  useEffect(() => {
+    document.title = finalTitle;
 
-      <meta name="description" content={finalDescription} />
+    const setMeta = (attribute, key, content) => {
+      let element = document.head.querySelector(
+        `meta[${attribute}="${key}"]`,
+      );
 
-      <meta name="robots" content="index, follow" />
+      if (!element) {
+        element = document.createElement("meta");
+        element.setAttribute(attribute, key);
+        document.head.appendChild(element);
+      }
 
-      <link rel="canonical" href={canonicalUrl} />
+      element.setAttribute("content", content);
+      element.removeAttribute("data-rh");
+    };
+   
+    setMeta("name", "description", finalDescription);
+    setMeta("name", "robots", "index, follow");
+    setMeta("property", "og:type", "website");
+    setMeta("property", "og:site_name", "Swastixa Digital");
+    setMeta("property", "og:title", finalTitle);
+    setMeta("property", "og:description", finalDescription);   
+    setMeta("property", "og:url", canonicalUrl);
+    setMeta("property", "og:image", finalImage);
+    setMeta("name", "twitter:card", "summary_large_image");
+    setMeta("name", "twitter:title", finalTitle);
+    setMeta("name", "twitter:description", finalDescription);
+    setMeta("name", "twitter:image", finalImage);
 
-      <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="Swastixa Digital" />
-      <meta property="og:title" content={finalTitle} />
-      <meta property="og:description" content={finalDescription} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:image" content={finalImage} />
+    let canonical = document.head.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute("href", canonicalUrl);
+  }, [canonicalUrl, finalDescription, finalImage, finalTitle]);
 
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={finalTitle} />
-      <meta
-        name="twitter:description"
-        content={finalDescription}
-      />
-      <meta name="twitter:image" content={finalImage} />
-    </Helmet>
-  );
+  return null;
 };
 
 export default SEO;
