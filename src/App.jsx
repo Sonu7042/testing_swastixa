@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
+import SEO from "./components/SEO";
 // Layout
 import Header from "./components/common/Header";
 // import Footer from "./components/common/Footer";
@@ -123,6 +124,7 @@ export default function App() {
       <ScrollToTop />
       <ScrollButton />
       <Header />
+          <SEO />
       <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route path="/" element={<Home />} />
