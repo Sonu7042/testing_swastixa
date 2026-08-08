@@ -3,100 +3,52 @@ import { ExternalLink } from "lucide-react";
 
 const portfolioData = [
   {
+    id: 1,
+    image:
+      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-page-social-media-marketing/swastixa-service-social-media-marketing-eazzy.webp",
+    link: "https://swastixa.com/work/SocialMedia",
+  },
+  {
     id: 2,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/bestmate-hero-design.png",
-    tags: ["Branding", "UI/UX", "Web Design", "Web Development"],
-    link: "https://bestmate.bexex.in/",
-  },
-  {
-    id: 15,
-    image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/three-dlf-work.jpeg",
-    tags: ["Branding", "UI/UX", "Web Design", "Web Development"],
-    link: "https://bexex.in/360/",
-  },
-  {
-    id: 4,
-    image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/yashvi-hero-design.png",
-    tags: ["Branding", "UI/UX", "Web Design"],
+      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-page-social-media-marketing/swastixa-service-social-media-marketing-fat-tiger.webp",
+    link: "https://swastixa.com/work/SocialMedia",
   },
   {
     id: 3,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/bexexglobal.png",
-    tags: ["Branding", "UI/UX", "Web Design", "Web Development"],
-    link: "https://bexexglobal.com/",
+      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-page-social-media-marketing/swastixa-service-social-media-marketing-kloy.webp",
+    link: "https://swastixa.com/work/SocialMedia",
+  },
+  {
+    id: 4,
+    image:
+      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-page-social-media-marketing/swastixa-service-social-media-marketing-mmm.webp",
+    link: "https://swastixa.com/work/SocialMedia",
   },
   {
     id: 5,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/birla-hero-design.png",
-    tags: ["Branding", "UI/UX", "Web Design"],
+      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-page-social-media-marketing/swastixa-service-social-media-marketing-mrg.webp",
+    link: "https://swastixa.com/work/SocialMedia",
   },
   {
     id: 6,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/eazzy-hero-design.png",
-    tags: ["Branding", "UI/UX", "Web Design", "Web Development"],
-    link: "https://eazzy.bexex.in/",
+      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-page-social-media-marketing/swastixa-service-social-media-marketing-ross.webp",
+    link: "https://swastixa.com/work/SocialMedia",
   },
   {
     id: 7,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/elaboratecapital.png",
-    tags: ["Branding", "UI/UX", "Web Design", "Web Development"],
-    link: "https://elaboratecapital.bexex.in/",
+      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-page-social-media-marketing/swastixa-service-social-media-marketing-tirasya.webp",
+    link: "https://swastixa.com/work/SocialMedia",
   },
   {
     id: 8,
     image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/elan-design-hero.png",
-    tags: ["Branding", "UI/UX", "Web Design"],
-  },
-  {
-    id: 9,
-    image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/gandhi-hero-design.png",
-    tags: ["Branding", "UI/UX", "Web Design"],
-  },
-  {
-    id: 14,
-    image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/project-one.png",
-    tags: ["Branding", "UI/UX", "Web Design"],
-  },
-  {
-    id: 10,
-    image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/graceaesthetic-design-hero.png",
-    tags: ["Branding", "UI/UX", "Web Design", "Web Development"],
-    link: "https://graceaesthetic.in/",
-  },
-  {
-    id: 11,
-    image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/elan-hero-design.png",
-    tags: ["Branding", "UI/UX", "Web Design"],
-  },
-  {
-    id: 12,
-    image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/project-two.png",
-    tags: ["Branding", "UI/UX", "Web Design"],
-  },
-  {
-    id: 13,
-    image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/project-three.png",
-    tags: ["Branding", "UI/UX", "Web Design"],
-  },
-  {
-    id: 1,
-    image:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/asva-hero-design.png",
-    tags: ["Branding", "UI/UX", "Web Design", "Web Development"],
+      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-page-social-media-marketing/swastixa-service-social-media-marketing-washguys.webp",
+    link: "https://swastixa.com/work/SocialMedia",
   },
 ];
 
@@ -112,9 +64,7 @@ const carouselItems = [
 
 const PortfolioCarousel = () => {
   const trackRef = useRef(null);
-
   const animationFrameRef = useRef(null);
-
   const positionRef = useRef(0);
 
   const isDraggingRef = useRef(false);
@@ -122,7 +72,6 @@ const PortfolioCarousel = () => {
 
   const dragStartXRef = useRef(0);
   const dragStartPositionRef = useRef(0);
-
   const hasDraggedRef = useRef(false);
 
   const [isDragging, setIsDragging] = useState(false);
@@ -140,7 +89,6 @@ const PortfolioCarousel = () => {
     if (!trackRef.current) {
       return 0;
     }
-
     return trackRef.current.scrollWidth / 3;
   }, []);
 
@@ -170,7 +118,6 @@ const PortfolioCarousel = () => {
     if (!trackRef.current) {
       return;
     }
-
     trackRef.current.style.transform = `translate3d(${positionRef.current}px, 0, 0)`;
   }, []);
 
@@ -413,7 +360,7 @@ const PortfolioCarousel = () => {
                       transition-transform
                       duration-700
                       ease-out
-                      group-hover:scale-[1.035]
+                      group-hover:scale-[1.018]
                     "
                   />
                 </a>
@@ -435,27 +382,8 @@ const PortfolioCarousel = () => {
                 />
               )}
 
-              {/* Bottom gradient */}
-              <div
-                className="
-                  pointer-events-none
-                  absolute
-                  inset-x-0
-                  bottom-0
-                  h-32
-                  bg-gradient-to-t
-                  from-black/85
-                  via-black/35
-                  to-transparent
-                  opacity-0
-                  transition-opacity
-                  duration-300
-                  group-hover:opacity-100
-                "
-              />
-
               {/* External link icon */}
-              {item.link && (
+              {/* {item.link && (
                 <div
                   className="
                     pointer-events-none
@@ -483,52 +411,7 @@ const PortfolioCarousel = () => {
                 >
                   <ExternalLink size={15} />
                 </div>
-              )}
-
-              {/* Tags */}
-              <div
-                className="
-                  pointer-events-none
-                  absolute
-                  bottom-4
-                  left-4
-                  right-4
-                  z-10
-                  flex
-                  translate-y-3
-                  flex-wrap
-                  gap-1.5
-                  opacity-0
-                  transition-all
-                  duration-300
-                  group-hover:translate-y-0
-                  group-hover:opacity-100
-                "
-              >
-                {item.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="
-                      rounded-md
-                      border
-                      border-white/15
-                      bg-white/10
-                      px-2.5
-                      py-1
-                      text-[10px]
-                      font-medium
-                      text-white
-                      backdrop-blur-md
-
-                      sm:px-3
-                      sm:py-1.5
-                      sm:text-[11px]
-                    "
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
+              )} */}
             </div>
           ))}
         </div>

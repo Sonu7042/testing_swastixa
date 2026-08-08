@@ -2,7 +2,7 @@ import React from 'react'
 import ExcellenceHero from '../components/socialmediamarketing/ExcellenceHero'
 import LogoCarousel from '../components/home/Logo'
 import ServiceCards from '../components/services/servicecards'
-// import PortfolioCarousel from '../components/socialmediamarketing/portfolioData'
+import PortfolioCarousel from '../components/socialmediamarketing/portfolioData'
 import WhyChooseUs from '../components/socialmediamarketing/WhyChooseUs'
 import HowWeWork from '../components/socialmediamarketing/HowWeWork'
 // import CaseStudies from '../components/socialmediamarketing/caseStudies'
@@ -17,6 +17,7 @@ const SocialMediaMarketingAgency = () => {
             <HowWeWork />
             {/* <CaseStudies /> */}
             <ServiceCards />
+            <PortfolioCarousel />
             <LogoCarousel />
             <FAQSection />
             <CTASection />
