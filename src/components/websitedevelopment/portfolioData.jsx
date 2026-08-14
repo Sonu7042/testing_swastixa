@@ -97,6 +97,7 @@ const portfolioData = [
     image:
       "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-web-page-images/asva-hero-design.png",
     tags: ["Branding", "UI/UX", "Web Design", "Web Development"],
+    link: "https://asvawater.com/",
   },
 ];
 
