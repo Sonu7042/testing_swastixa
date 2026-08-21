@@ -2,6 +2,7 @@ import React from 'react'
 import ExcellenceHero from '../components/PackagingDesign/ExcellenceHero'
 import LogoCarousel from '../components/home/Logo'
 import ServiceCards from '../components/services/servicecards'
+import PortfolioCarousel from '../components/PackagingDesign/portfolioData'
 import WhyChooseUs from '../components/PackagingDesign/WhyChooseUs'
 import HowWeWork from '../components/PackagingDesign/HowWeWork'
 // import CaseStudies from '../components/PackagingDesign/caseStudies'
@@ -16,6 +17,7 @@ const PackagingDesign = () => {
             <HowWeWork />
             {/* <CaseStudies /> */}
             <ServiceCards />
+            <PortfolioCarousel />
             <LogoCarousel />
             <FAQSection />
             <CTASection />
