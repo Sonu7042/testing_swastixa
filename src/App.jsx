@@ -41,7 +41,7 @@ import "./App.css";
 import ScrollToTop from "./components/common/ScrollToTop";
 import ScrollButton from "./components/common/ScrollButton";
 import CommingSoon from "./components/common/CommingSoon";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
+import PrivacyPolicy from "./pages/PrivacyPolicy";    
 
 // Smooth Scroll
 import Lenis from "lenis";

@@ -6,18 +6,20 @@ import ServiceCards from '../components/services/servicecards'
 // import PortfolioCarousel from '../components/videoproductionhouse/portfolioData'
 import WhyChooseUs from '../components/videoproductionhouse/WhyChooseUs'
 import HowWeWork from '../components/videoproductionhouse/HowWeWork'
-// import CaseStudies from '../components/videoproductionhouse/caseStudies'
+import CaseStudies from '../components/videoproductionhouse/caseStudies'
 import FAQSection from '../components/videoproductionhouse/FAQSection'
 import CTASection from '../components/common/CTASection'
+import VideoportfolioCoursal from '../components/videoproductionhouse/VideoportfolioCoursal'
 
 const VideoProductionHouse = () => {
     return (
         <div className="bg-black min-h-screen">
             <ExcellenceHero />
-            <WhyChooseUs />
+            <WhyChooseUs />    
             <HowWeWork />
-            {/* <CaseStudies /> */}
-            <ServiceCards />
+            <CaseStudies />
+            <ServiceCards /> 
+            <VideoportfolioCoursal />
             <LogoCarousel />
             <FAQSection />
             <CTASection />
