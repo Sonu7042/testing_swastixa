@@ -40,12 +40,12 @@ const Smmbutton = ({ activeTab }) => {
             >
                 Branding
             </button>
-            {/* <button
+            <button
                 onClick={() => active !== 'print' && navigate('/work/Print')}
                 className={getButtonClass('print')}
             >
                 Print
-            </button> */}
+            </button>
         </>
     );
 };

@@ -27,13 +27,15 @@ const isImageUrl = (url) => {
   return /\.(jpg|jpeg|png|webp|gif|svg)(\?.*)?$/i.test(url) || url.startsWith('data:image');
 };
 
-const PDFCard = ({ pdfUrl, title, onClick, customAspectRatio }) => {
+const PDFCard = ({ pdfUrl, thumbnail, imageUrl, title, onClick, customAspectRatio }) => {
   const canvasRef = useRef(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [aspectRatio, setAspectRatio] = useState(3 / 4); // Default to standard portrait
 
-  const isImg = isImageUrl(pdfUrl);
+  const thumbUrl = thumbnail || imageUrl;
+  const isDirectImage = isImageUrl(pdfUrl);
+  const displaySrc = thumbUrl || (isDirectImage ? pdfUrl : null);
 
   useEffect(() => {
     let isMounted = true;
@@ -162,12 +164,14 @@ const PDFCard = ({ pdfUrl, title, onClick, customAspectRatio }) => {
       }
     };
 
-    if (isImg) {
+    if (displaySrc) {
       const img = new Image();
-      img.src = pdfUrl;
+      img.src = displaySrc;
       img.onload = () => {
         if (isMounted) {
-          setAspectRatio(img.width / img.height);
+          if (img.width && img.height) {
+            setAspectRatio(img.width / img.height);
+          }
           setLoading(false);
         }
       };
@@ -184,7 +188,7 @@ const PDFCard = ({ pdfUrl, title, onClick, customAspectRatio }) => {
     return () => {
       isMounted = false;
     };
-  }, [pdfUrl, isImg]);
+  }, [pdfUrl, displaySrc]);
 
   const fileExtension = pdfUrl ? pdfUrl.split('.').pop().split('?')[0].toUpperCase() : '';
 
@@ -192,7 +196,7 @@ const PDFCard = ({ pdfUrl, title, onClick, customAspectRatio }) => {
     <div
       onClick={onClick || (() => window.open(pdfUrl, '_blank'))}
       style={customAspectRatio ? {} : { aspectRatio: `${aspectRatio}` }}
-      className={`group relative rounded-2xl overflow-hidden bg-neutral-900 border border-white/10 cursor-pointer flex flex-col justify-between shadow-2xl ${isImg ? 'hover:border-blue-500/50' : 'hover:border-red-500/50'} transition-colors duration-500 w-full ${customAspectRatio || ''}`}
+      className={`group relative rounded-2xl overflow-hidden bg-neutral-900 border border-white/10 cursor-pointer flex flex-col justify-between shadow-2xl hover:border-blue-500/50 transition-colors duration-500 w-full ${customAspectRatio || ''}`}
     >
       {/* Visual Content (Image or PDF Canvas) */}
       <div className="absolute inset-0 w-full h-full flex items-center justify-center overflow-hidden">
@@ -201,16 +205,16 @@ const PDFCard = ({ pdfUrl, title, onClick, customAspectRatio }) => {
         )}
         {error && (
           <div className="text-white/40 text-center px-4 z-20">
-            <span className="block text-4xl mb-2">{isImg ? '🖼️' : '📄'}</span>
-            <span className="text-sm font-medium">{isImg ? 'Click to View Image' : 'Click to View PDF'}</span>
+            <span className="block text-4xl mb-2">{isDirectImage ? '🖼️' : '📄'}</span>
+            <span className="text-sm font-medium">{isDirectImage ? 'Click to View Image' : 'Click to View PDF'}</span>
           </div>
         )}
 
         {!loading && !error && (
-          isImg ? (
+          displaySrc ? (
             <img
-              src={pdfUrl}
-              alt={title}
+              src={displaySrc}
+              alt={title || "Preview"}
               className="w-full h-full object-cover transition-opacity duration-500 group-hover:scale-102 transition-transform duration-700"
             />
           ) : (
@@ -223,8 +227,8 @@ const PDFCard = ({ pdfUrl, title, onClick, customAspectRatio }) => {
       </div>
 
       {/* Badge Indicator */}
-      <div className={`absolute top-4 right-4 ${isImg ? 'bg-blue-600/90' : 'bg-[#243E84]'} backdrop-blur-xs text-white text-xs font-bold px-2.5 py-1 rounded-md tracking-wider flex items-center gap-1 z-10 shadow-lg`}>
-        {isImg ? (
+      <div className={`absolute top-4 right-4 ${isDirectImage ? 'bg-blue-600/90' : 'bg-[#243E84]'} backdrop-blur-xs text-white text-xs font-bold px-2.5 py-1 rounded-md tracking-wider flex items-center gap-1 z-10 shadow-lg`}>
+        {isDirectImage ? (
           <>
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 00-1.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
@@ -242,21 +246,11 @@ const PDFCard = ({ pdfUrl, title, onClick, customAspectRatio }) => {
       </div>
 
       {/* Hover Information Overlay */}
-      <div className="absolute inset-0 bg-linear-to-t  to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 z-10 pointer-events-none">
-        <h3 className="text-white text-lg font-bold tracking-tight mb-1">{title}</h3>
-        <p className={`${isImg ? 'text-blue-400' : 'text-red-400'} text-sm font-medium flex items-center gap-1`}>
-          {/* {isImg ? 'View Image' : 'Open Document'} */}
-          {/* <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-          </svg> */}
-        </p>
-      </div>
-
-      {/* Bottom Title bar (Visible by default) */}
-      {/* <div className="absolute bottom-0 left-0 right-0 bg-black/60 backdrop-blur-md p-4 border-t border-white/5 flex items-center justify-between z-10">
-        <span className="text-white/80 font-medium truncate text-sm">{title}</span>
-        <span className={`text-xs text-white/40 ${isImg ? 'group-hover:text-blue-400' : 'group-hover:text-red-400'} transition-colors`}>View</span>
-      </div> */}
+      {title && (
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 z-10 pointer-events-none">
+          <h3 className="text-white text-lg font-bold tracking-tight mb-1">{title}</h3>
+        </div>
+      )}
     </div>
   );
 };
