@@ -22,6 +22,48 @@ export const seoData = {
       "Explore Swastixa's social media portfolio showcasing creative campaigns, strategic content, and impactful brand growth across digital platforms.",
   },
 
+  "/work/WebsiteDevelopment": {
+    title: "Website Development Portfolio | Swastixa Digital",
+    description:
+      "Explore websites designed and developed by Swastixa Digital, including responsive, modern, and conversion-focused digital experiences.",
+  },
+
+  "/work/DigitalMarketing": {
+    title: "Digital Marketing Portfolio | Swastixa Digital",
+    description:
+      "Explore Swastixa Digital's marketing work, campaigns, creative strategy, and measurable growth solutions for businesses.",
+  },
+
+  "/work/reels": {
+    title: "Creative Reels Portfolio | Swastixa Digital",
+    description:
+      "Watch creative short-form reels produced by Swastixa Digital to help brands engage audiences and strengthen their social presence.",
+  },
+
+  "/work/Branding": {
+    title: "Branding Portfolio | Swastixa Digital",
+    description:
+      "Explore branding and visual identity projects by Swastixa Digital, created to give businesses a distinctive and consistent presence.",
+  },
+
+  "/work/Print": {
+    title: "Print Design Portfolio | Swastixa Digital",
+    description:
+      "Explore professional print and graphic design work created by Swastixa Digital for memorable and consistent brand communication.",
+  },
+
+  "/awards": {
+    title: "Awards & Recognition | Swastixa Digital",
+    description:
+      "Discover awards, achievements, and recognition received by Swastixa Digital for creative and digital work.",
+  },
+
+  "/PrivacyPolicy": {
+    title: "Privacy Policy | Swastixa Digital",
+    description:
+      "Read the Swastixa Digital privacy policy to understand how information is collected, used, and protected on our website.",
+  },
+
   "/about": {
     title: "About Us | Swastixa",
     description:
