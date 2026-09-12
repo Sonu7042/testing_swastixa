@@ -11,6 +11,11 @@ export const seoData = {
       "Explore Swastixa's video production portfolio, showcasing high-quality visual storytelling, commercial films, and creative content designed to engage audiences and elevate brands.",
   },
 
+  "/work": {
+    title: "Our Work | Swastixa Digital",
+    description: "Explore Swastixa Digital's portfolio across branding, websites, video production, social media, and performance marketing.",
+  },
+
   "/work/SocialMedia": {
     title: "Swastixa | Social Media Portfolio",
     description:

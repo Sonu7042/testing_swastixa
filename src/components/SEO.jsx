@@ -8,7 +8,7 @@ const DEFAULT_SEO = {
     "Swastixa Digital is a full-service digital company that blends strategy, design, and technology to deliver 360° creative and digital marketing solutions, including video production, social media, and website development.",
 };
 
-const SEO = ({ title, description, image }) => {
+const SEO = ({ title, description, image, type = "website", noIndex = false }) => {
   const location = useLocation();
 
   const currentPath =
@@ -45,8 +45,8 @@ const SEO = ({ title, description, image }) => {
     };
    
     setMeta("name", "description", finalDescription);
-    setMeta("name", "robots", "index, follow");
-    setMeta("property", "og:type", "website");
+    setMeta("name", "robots", noIndex ? "noindex, nofollow" : "index, follow, max-image-preview:large");
+    setMeta("property", "og:type", type);
     setMeta("property", "og:site_name", "Swastixa Digital");
     setMeta("property", "og:title", finalTitle);
     setMeta("property", "og:description", finalDescription);   
@@ -64,7 +64,7 @@ const SEO = ({ title, description, image }) => {
       document.head.appendChild(canonical);
     }
     canonical.setAttribute("href", canonicalUrl);
-  }, [canonicalUrl, finalDescription, finalImage, finalTitle]);
+  }, [canonicalUrl, finalDescription, finalImage, finalTitle, noIndex, type]);
 
   return null;
 };

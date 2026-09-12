@@ -1,94 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
     <loc>https://swastixa.com/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
   </url>
-
-  <url>
-    <loc>https://swastixa.com/work/Production</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://swastixa.com/work/SocialMedia</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
   <url>
     <loc>https://swastixa.com/about</loc>
-    <changefreq>monthly</changefreq>    
-    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://swastixa.com/services</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
   </url>
-
   <url>
-    <loc>https://swastixa.com/services/social-media-marketing</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://swastixa.com/work</loc>
   </url>
-
-  <url>
-    <loc>https://swastixa.com/services/website-development</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://swastixa.com/services/performance-marketing</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://swastixa.com/services/influencer-marketing</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://swastixa.com/services/content-marketing</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://swastixa.com/services/seo-agency</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://swastixa.com/services/video-production-house</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://swastixa.com/services/packaging-design</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
   <url>
     <loc>https://swastixa.com/careers</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
   </url>
-
   <url>
     <loc>https://swastixa.com/blog</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
   </url>
-
+  <url>
+    <loc>https://swastixa.com/work/Production</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/work/SocialMedia</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/work/WebsiteDevelopment</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/work/DigitalMarketing</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/work/reels</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/work/Branding</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/work/Print</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/services/social-media-marketing</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/services/website-development</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/services/performance-marketing</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/services/influencer-marketing</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/services/content-marketing</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/services/seo-agency</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/services/video-production-house</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/services/packaging-design</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/blog/digital-marketing-strategy-smes-budget</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/blog/offline-to-online-digital-transformation-roadmap</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/blog/social-media-management-playbook-local-businesses</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/blog/on-page-seo-basics-business-owners</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/blog/high-converting-website-service-businesses</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/blog/seo-vs-sco-what-business-needs</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/blog/google-ads-vs-meta-ads-comparison</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/blog/local-seo-service-providers-guide</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/blog/video-reels-carousels-best-format-brand</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/blog/data-driven-marketing-analytics-small-brands</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/blog/common-paid-ads-mistakes-solutions</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/blog/website-design-mistakes-killing-leads</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/blog/content-calendar-plan-30-days-posts</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/blog/retargeting-ads-guide-convert-visitors</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/blog/in-house-production-visual-content-social-media</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/blog/graphic-design-builds-trust-conversions</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/blog/brand-building-instagram-facebook-reels</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/blog/choose-right-digital-marketing-partner</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/blog/swastixa-full-stack-digital-marketing-approach</loc>
+  </url>
+  <url>
+    <loc>https://swastixa.com/blog/swastixa-success-blueprint-client-growth</loc>
+  </url>
 </urlset>

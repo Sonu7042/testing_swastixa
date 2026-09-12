@@ -6,21 +6,42 @@ const portfolioData = [
   {
     id: 1,
     thumbnail:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-main-page/swastixa-service-creative-performance.webp",
+      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-video-production-house-carousel-thumbnails-and-videos/swastixa-service-video-production-house-arica-06.webp",
     video:
       "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/production-house-video/swastixa-five-video/swastixa-about-five-video.mp4",
   },
   {
     id: 2,
     thumbnail:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-main-page/swastixa-service-creative-performance.webp",
+      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-video-production-house-carousel-thumbnails-and-videos/swastixa-service-video-production-house-bestmate.webp",
     video:
       "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/production-house-video/swastixa-five-video/swastixa-about-five-video.mp4",
   },
   {
     id: 3,
     thumbnail:
-      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-main-page/swastixa-service-creative-performance.webp",
+      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-video-production-house-carousel-thumbnails-and-videos/swastixa-service-video-production-house-kloy.webp",
+    video:
+      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/production-house-video/swastixa-five-video/swastixa-about-five-video.mp4",
+  },
+  {
+    id: 4,
+    thumbnail:
+      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-video-production-house-carousel-thumbnails-and-videos/swastixa-service-video-production-house-m3m.webp",
+    video:
+      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/production-house-video/swastixa-five-video/swastixa-about-five-video.mp4",
+  },
+  {
+    id: 5,
+    thumbnail:
+      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-video-production-house-carousel-thumbnails-and-videos/swastixa-service-video-production-house-mrg.webp",
+    video:
+      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/production-house-video/swastixa-five-video/swastixa-about-five-video.mp4",
+  },
+  {
+    id: 6,
+    thumbnail:
+      "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixaservice/service-video-production-house-carousel-thumbnails-and-videos/swastixa-service-video-production-house-swadeshi.webp",
     video:
       "https://pub-6aea620a48a5427f992db658caf5fb4a.r2.dev/swastixawork/production-house-video/swastixa-five-video/swastixa-about-five-video.mp4",
   },
